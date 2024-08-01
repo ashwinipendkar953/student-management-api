@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const studentRoutes = require("./routes/studentRoutes");
+const teacherRoutes = require("./routes/teacherRoutes");
 
 const { initializeDatabase } = require("./db/db.connection");
 require("dotenv").config();
@@ -21,6 +22,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api", studentRoutes);
+app.use("/api", teacherRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
