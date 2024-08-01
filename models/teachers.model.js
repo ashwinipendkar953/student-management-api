@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const teacherSchema = new mongoose.Schema({
   name: String,
-  subjects: String,
+  subject: String,
   age: Number,
   gender: String,
   yearsOfExperience: Number,
